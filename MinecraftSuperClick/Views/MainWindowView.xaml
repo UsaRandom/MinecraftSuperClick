@@ -1,8 +1,22 @@
 ﻿<Window x:Class="MinecraftSuperClick.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Minecraft Super Click" Height="175" Width="400" DataContext="{Binding Main, Mode=OneWay, Source={StaticResource Locator}}">
     <Grid>
-        
+
+        <Button Content="{Binding LeftClickContent, Mode=OneWay}"
+                Command="{Binding LeftClickCommand}"
+                HorizontalAlignment="Left"
+                Width="170"
+                Height="100"
+                Margin="15"/>
+
+
+        <Button Content="{Binding RightClickContent}"
+                Command="{Binding RightClickCommand}"
+                HorizontalAlignment="Right"
+                Width="170"
+                Height="100"
+                Margin="15"/>
     </Grid>
 </Window>
